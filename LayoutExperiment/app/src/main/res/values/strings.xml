@@ -3,4 +3,5 @@
     <string name="linearlayout">线性布局演示</string>
     <string name="relativelayout">相对布局演示</string>
     <string name="tablelayout">表格布局演示</string>
+    <string name="constraintlayout">约束布局演示</string>
 </resources>

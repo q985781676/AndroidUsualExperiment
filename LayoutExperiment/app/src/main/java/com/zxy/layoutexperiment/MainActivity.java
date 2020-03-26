@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_linearlayout,btn_relativelayout,btn_tablelayout;
+    private Button btn_linearlayout,btn_relativelayout,btn_tablelayout,btn_constraintlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +24,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_linearlayout = findViewById(R.id.linearly);
         btn_relativelayout = findViewById(R.id.relatively);
         btn_tablelayout = findViewById(R.id.tableau);
+        btn_constraintlayout=findViewById(R.id.constraint);
 
         btn_linearlayout.setOnClickListener(this);
         btn_relativelayout.setOnClickListener(this);
         btn_tablelayout.setOnClickListener(this);
+        btn_constraintlayout.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
+            startActivity(intent);});
     }
 
     /**
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, TableLayoutActivity.class);
                 startActivity(intent);
                 break;
+
             default:break;
         }
     }

@@ -31,6 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:id="@+id/constraint"
+            android:text="@string/constraintlayout"/>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:id="@+id/tableau"
             android:text="@string/tablelayout"/>
 </LinearLayout>
