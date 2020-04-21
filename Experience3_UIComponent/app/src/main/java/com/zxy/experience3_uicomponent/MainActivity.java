@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button_listView, button_alertDialog,button_xmlMenu;
+    Button button_listView, button_alertDialog,button_xmlMenu,button_actionModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
         button_xmlMenu = findViewById(R.id.button_xmlMenu);
         button_xmlMenu.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(),XmlMenuActivity.class);
+            startActivity(intent);
+        });
+
+        //展示actionModel
+        button_actionModel = findViewById(R.id.button_actionMenu);
+        button_actionModel.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(),ActionModeActivity.class);
             startActivity(intent);
         });
     }
